@@ -1,12 +1,12 @@
 //const ConvertLib = artifacts.require("ConvertLib");
-const RadioGugu = artifacts.require("RadioGugu");
+const Promo = artifacts.require("Promo");
 //const Promethium = artifacts.require("Promethium");
 
 
 module.exports = function(deployer) {
   //deployer.deploy(ConvertLib);
-  //deployer.link(ConvertLib, NovaKoin4);
+  //deployer.link(ConvertLib, MetaCoin);
 
-  deployer.deploy(RadioGugu);
+  deployer.deploy(Promo);
   //deployer.deploy(Promethium);
 };

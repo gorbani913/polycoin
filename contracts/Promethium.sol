@@ -694,7 +694,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract Promethium is Context, IERC20, Ownable {
+contract Promo is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 

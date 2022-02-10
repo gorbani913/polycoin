@@ -20,7 +20,7 @@
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
- const privatekeys = ['e600115a09f3190f8963c1aba7872f599b42958f0213b9efe48a94ff4b59d324'];
+require('dotenv').config(); // Load .env file
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -57,6 +57,16 @@ module.exports = {
     ),
     network_id: 3,
     skipDryRun: true
+  },
+  matic: {
+    provider: () => new HDWalletProvider(process.env.MNEMONIC, 
+    `https://rpc-mumbai.matic.today`),
+    network_id: 80001,
+    confirmations: 2,
+    timeoutBlocks: 200,
+    skipDryRun: true,
+    gas: 6000000,
+    gasPrice: 10000000000,
   },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
